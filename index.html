@@ -3,27 +3,64 @@
 <head>
 	<style>
 
+    *{
+        box-sizing: border-box;
+    }
+
 	body{
-		font-family: monospace;
-		background: #000000 linear-gradient(to top left, #8D8D8D, #000000);
-		color: rgb(252,252,252);
+        padding: 1em;
+
+        font-family: monospace;
+        color: rgba(0, 0, 0, .5);
+
+        background: #7100FF linear-gradient(to bottom left, #7100FF, #FFF);
 	}
-	
+
+    main{
+        animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(-5%);
+        }
+    }
+
 	h1{
-		margin: .5em 0;
-		
+		margin: 50vh 0 0;
+
+        text-indent: -30px;
 		line-height: 1;
-		color: rgba(255, 255, 255, .25);
+        letter-spacing: -.2em;
+		color: rgba(0, 0, 0, .25);
 		font-style: normal;
-		font-weight: 400;
-		font-size: 20em;
+		font-weight: 700;
+		font-size: 30em;
 		font-family: "Futura Medium", "Helvetica", "Arial", sans-serif;
+
+        -webkit-filter: blur(10px);
+                filter: blur(10px);
 	}
-		
+
+    h2{
+        font-weight: 600;
+    }
+
+    iframe{
+        opacity: .75;
+
+        transition: opacity .5s;
+    }
+
+    iframe:hover{
+        opacity: .9;
+    }
+
 	</style>
-	
+
 	<title>nest</title>
-	
+
 </head>
 <body>
 
