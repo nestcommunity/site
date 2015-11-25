@@ -1,80 +1,39 @@
 <!doctype>
 <html>
 <head>
-	<style>
-
-    *{
-        box-sizing: border-box;
-    }
-
-	body{
-        padding: 1em;
-
-        font-family: monospace;
-        color: rgba(0, 0, 0, .5);
-
-        background: #7100FF linear-gradient(to bottom left, #7100FF, #FFF);
-	}
-
-    main{
-        animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    @keyframes fadeIn{
-        from{
-            opacity: 0;
-            transform: translateY(-5%);
-        }
-    }
-
-	h1{
-		margin: 50vh 0 0;
-
-        text-indent: -30px;
-		line-height: 1;
-        letter-spacing: -.2em;
-		color: rgba(0, 0, 0, .25);
-		font-style: normal;
-		font-weight: 700;
-		font-size: 30em;
-		font-family: "Futura Medium", "Helvetica", "Arial", sans-serif;
-
-        -webkit-filter: blur(10px);
-                filter: blur(10px);
-	}
-
-    h2{
-        font-weight: 600;
-    }
-
-    iframe{
-        opacity: .75;
-
-        transition: opacity .5s;
-    }
-
-    iframe:hover{
-        opacity: .9;
-    }
-
-	</style>
 
 	<title>nest</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
 
-    <main>
+	<div class="wrapper">
+	<header>
 
-        <h1>nest</h1>
-        <h2>turning ideas into action.</h2>
+    <h1 class="logo">nest</h1>
+    <h2 class="tagline">turning ideas into action.</h2>
 
-        <script async defer src="https://nestcommunity.herokuapp.com/slackin.js?large"></script>
+	</header>
 
-        <p>workshops | collaboration | events | mentors | resources</p>
-        <p>Got an idea for a start-up, product or service? Become a <strong>nest</strong>builder.</p>
+  <main>
 
-    </main>
+		<ul>
+			<li>collaboration</li>
+	    <li>workshops</li>
+			<li>events</li>
+			<li>resources</li>
+			<li>advice</li>
+		</ul>
+
+    <p>Got an idea for a start-up, product or service?</p>
+
+		<a class="button" href="https://nestcommunity.herokuapp.com/slackin.js?">Become a <strong>nest</strong>builder.</a>
+
+  </main>
+	</div>
 
 </body>
 </html>

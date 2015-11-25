@@ -1,0 +1,165 @@
+/* dirty styles reset */
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 12px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: rgb(128,0,128);
+}
+
+header,
+main {
+  float: left;
+  width: 100%;
+  padding: 4em 2em;
+
+  animation: fadeIn 1s forwards ease-out;
+}
+
+.wrapper{
+  overflow: hidden; /* clearfix */
+  background: url('background.jpg');
+  background-size: cover;
+}
+
+header{
+  background: rgba(0,0,255,.75);
+  background: linear-gradient(to top right, rgba(255,0,0,.75), rgba(0,0,255,.75));
+}
+
+header .logo{
+  margin: 0 auto .5em;
+  height: 4em;
+
+  text-indent: -99999px;
+
+  background: left center no-repeat;
+  background-image: url('logo.png');
+  background-image: none, url('logo.svg'); /* fallback to png if .svg isnt supported */
+  background-size: contain;
+
+  animation: fromTop 1.33s forwards ease-out;
+}
+
+header .tagline{
+  margin-bottom: .5em;
+
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 400;
+  color: white;
+
+  animation: fromTop 1.33s forwards ease-out;
+}
+
+main{
+  background: white;
+}
+
+main p,
+main li,
+main .button{
+  animation: fromRight 1.33s forwards ease-out;
+}
+
+main p,
+main li{
+  margin-bottom: .5em;
+  max-width: 40em;
+
+  font-size: 1.5em;
+  line-height: 1.4em;
+}
+
+main li{
+  list-style: inside none;
+
+  font-weight: 700;
+  font-size: 2em;
+}
+
+main .button{
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+
+  text-decoration: none;
+  font-size: 2em;
+  text-align: center;
+  color: inherit;
+
+  border: 2px solid;
+}
+
+main .button:hover{
+  color: white;
+  background: rgb(128,0,128);
+  background: linear-gradient(to right, rgba(255,0,0,.75), rgba(0,0,255, .75));
+}
+
+/* larger screens */
+
+@media (min-width: 600px) {
+
+  body{
+    font-size: 16px;
+  }
+
+  header,
+  main {
+    height: 100vh;
+    width: 50%;
+  }
+
+  header{
+    padding: 8em 2em;
+  }
+
+  header .logo{
+    height: 6em;
+  }
+
+  header .tagline{
+    font-size: 2em;
+  }
+
+}
+
+/* animations */
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+}
+
+@keyframes fromTop {
+  from{
+    transform: translateY(-2.5rem);
+  }
+}
+
+@keyframes fromRight {
+  from{
+    transform: translateX(1.25rem);
+  }
+}
+
+@keyframes fromBottom {
+  from{
+    transform: translateY(2.5rem);
+  }
+}
+
+@keyframes fromLeft {
+  from{
+    transform: translateX(-1.25rem);
+  }
+}
