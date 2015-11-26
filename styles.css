@@ -1,3 +1,16 @@
+/* fonts */
+@font-face {
+  font-family: 'Charlottely';
+  src: url('fonts/charlottely.eot');
+  src: url('fonts/charlottely.eot?#iefix') format('embedded-opentype'),
+       url('fonts/charlottely.woff2') format('woff2'),
+       url('fonts/charlottely.woff') format('woff'),
+       url('fonts/charlottely.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* dirty styles reset */
 *::before,
 *,
@@ -9,9 +22,9 @@
 
 body{
   font-size: 12px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Abel', sans-serif;
   font-weight: 400;
-  color: rgb(128,0,128);
+  color: rgb(31, 150, 104);
 }
 
 header,
@@ -30,8 +43,8 @@ main {
 }
 
 header{
-  background: rgba(0,0,255,.75);
-  background: linear-gradient(to top right, rgba(255,0,0,.75), rgba(0,0,255,.75));
+  background: rgba(31, 150, 104, .75);
+  background: linear-gradient(to top right, rgba(255, 0, 0, .75), rgba(31, 150, 104, .75));
 }
 
 header .logo{
@@ -52,7 +65,6 @@ header .tagline{
   margin-bottom: .5em;
 
   font-size: 1.5em;
-  font-style: italic;
   font-weight: 400;
   color: white;
 
@@ -81,8 +93,9 @@ main li{
 main li{
   list-style: inside none;
 
+  font-family: 'Charlottely';
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 main .button{
@@ -101,7 +114,8 @@ main .button{
 main .button:hover{
   color: white;
   background: rgb(128,0,128);
-  background: linear-gradient(to right, rgba(255,0,0,.75), rgba(0,0,255, .75));
+
+  background: linear-gradient(to right, rgba(255, 0, 0, .75), rgba(31, 150, 104, .75));
 }
 
 /* larger screens */
